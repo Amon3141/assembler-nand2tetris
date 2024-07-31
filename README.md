@@ -5,3 +5,4 @@ I wrote this while working through "Building a Modern Computer From First Princi
 The book does not give the implementation (except for a few small tips); this code was designed and written by me.
 
 The example assembly files "Add.asm", "Pong.asm", and "Rect.asm" were provided in the book.
+The hack files "Add.hack", "Pong.hack", and "Reck.hack" are the outputs of my assembler.
