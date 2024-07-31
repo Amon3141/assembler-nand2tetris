@@ -297,7 +297,7 @@ int main() {
     ofilename = filename.substr(0, filename.find('.')) + ".hack";
   } else { ofilename = filename + ".hack"; }
   
-  filename = "Examples (in Assembly)/" + filename;
+  filename = "Examples (in assembly)/" + filename;
   ofilename = "Outputs (in Hack)/" + ofilename;
   
   //.asm file to read and .hack file to write on
