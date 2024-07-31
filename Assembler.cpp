@@ -285,7 +285,7 @@ bool isNumeric(string s) {
 
 // main function
 // input: the name of the asm file you want to convert to Hack
-//        (example) Add.asm or Add
+//        (example) Add.asm
 int main() {
   //.asm file
   string filename;
@@ -293,9 +293,12 @@ int main() {
 
   //construct .hack file name from the input .asm file name
   string ofilename;
-  if (filename.find('.')) {
+  if (filename.find('.') != string::npos && filename.substr(filename.find('.')) == ".asm") {
     ofilename = filename.substr(0, filename.find('.')) + ".hack";
-  } else { ofilename = filename + ".hack"; }
+  } else {
+    cout << "The input must be in the (filename).asm format";
+    return 1;
+  }
   
   filename = "Examples (in assembly)/" + filename;
   ofilename = "Outputs (in Hack)/" + ofilename;
@@ -400,5 +403,7 @@ int main() {
   //close the files
   assemblie.close();
   ofile.close();
+
+  return 0;
 }
 
